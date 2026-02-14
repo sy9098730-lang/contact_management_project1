@@ -77,4 +77,19 @@ class Auth:
         cursor.execute("DELETE FROM contacts WHERE owner=?", (self.owner, ))
         conn.commit()
         print("Contact Successfully Deleted")
+
+        auth = Auth()
+
+print("1 to Register")
+print("2 to Login")
+
+choice = input("Enter your choice: ")
+if choice == "1":
+    usr = input("Enter your name: ")
+    password = input("Enter your password: ")
+    auth.register(usr, password)
+    
+    
+elif choice == "2":
+    usr = input("Enter your name: ")
     
